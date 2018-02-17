@@ -1,0 +1,21 @@
+<% include header %>
+<% if(movies.length){ %>
+	<% movies.forEach(function(movie){ %>
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<div class="text-muted pull-right">
+				<%= movie.published %>
+			</div>
+			<%= movie.rank %>
+		</div>
+		<div class="panel-body">
+			<%= movie.name %>
+		</div>
+	</div>
+	<% }) %>
+	<% } else { %>
+	<div style="color:rgb(18, 160, 196)"> No Movies! 
+		<a href="/new-entry">Add a movie?</a>
+	</div> 
+	<% } %>
+<% include footer %>
